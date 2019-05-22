@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+    <bean id="collectionInjection" class="spring.collections.CollectionsInjection">
+        <property name="documentList">
+            <list>
+                <value>BMW</value>
+                <value>Opel</value>
+                <value>Audi</value>
+                <value>Honda</value>
+            </list>
+        </property>
+
+        <property name="documentSet">
+            <set>
+                <value>Manchester United</value>
+                <value>Chelsea</value>
+                <value>Manchester United</value>
+                <value>Liverpool</value>
+            </set>
+        </property>
+
+        <property name="documentMap">
+            <map>
+                <entry key="1" value="BMW"/>
+                <entry key="2" value="Opel"/>
+                <entry key="3" value="Audi"/>
+                <entry key="4" value="Honda"/>
+            </map>
+        </property>
+
+        <property name="documentProp">
+            <props>
+                <prop key="one">BMW</prop>
+                <prop key="two">Opel</prop>
+                <prop key="three">Audi</prop>
+                <prop key="four">Honda</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>
+
+
+

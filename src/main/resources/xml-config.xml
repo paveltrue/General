@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+    <!--Бин с ленивой инициализацией-->
+ <bean id="lazy" class="spring.simpleApp.SpringHelloWorld" lazy-init="true">
+     <!--Данные бина-->
+ </bean>
+
+    <!--Бин с определением метода инициализации-->
+    <bean id="init" class="spring.simpleApp.SpringHelloWorld" init-method="getHelloMessage">
+        <!--Данные бина-->
+    </bean>
+
+    <!--Бин с определением метода разрушения-->
+    <bean id="destroyBean" class="spring.simpleApp.SpringHelloWorld" destroy-method="getHelloMessage">
+        <!--Данные бина-->
+    </bean>
+</beans>
+
+
+
